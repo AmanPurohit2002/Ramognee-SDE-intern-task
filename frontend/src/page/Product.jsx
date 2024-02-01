@@ -31,10 +31,10 @@ const ProductViewPage = () => {
       <img
         src={product.image}
         alt={product.title}
-        className="w-[10vw] h-[35vh] object-cover mb-4"
+        className="w-[10vw] h-[35vh] object-cover mb-4 "
       />
       <h3 className="text-lg font-semibold mb-2">{product.title}</h3>
-      <p className="text-green-600 mb-2">₹{product.price.toFixed(2)}</p>
+      <p className="text-red-800 mb-2">₹{product.price.toFixed(2)}</p>
       <p className="text-gray-700 mb-4">
         {product.description.substring(0, 50)}
       </p>
