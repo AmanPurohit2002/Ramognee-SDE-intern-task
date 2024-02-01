@@ -40,10 +40,10 @@ const ForgotPasswordPage = () => {
       .send("service_b46xhnm", "template_1a74nca", templateParams,"8TiWzm83evd2FDJzb")
       .then(
         (response) => {
-          // console.log("Email sent successfully:", response);
+          console.log("Email sent successfully:", response);
         },
         (error) => {
-          // console.error("Error sending email:", error);
+          console.error("Error sending email:", error);
         }
       );
 

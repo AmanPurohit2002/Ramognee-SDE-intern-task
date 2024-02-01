@@ -32,11 +32,11 @@ const Header = () => {
             <FaHome size={20}/>
             <span className="ml-1">Home</span>
           </Link>
-          <Link to="/product" className="flex items-center">
+          <Link to="/clothing" className="flex items-center">
             <GiClothes size={20} />
             <span className="ml-1">Clothing</span>
           </Link>
-          <Link to="/product" className="flex items-center">
+          <Link to="/accessories" className="flex items-center">
             <RiAncientPavilionFill size={20} />
             <span className="ml-1">Accessories</span>
           </Link>

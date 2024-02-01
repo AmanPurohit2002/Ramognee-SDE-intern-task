@@ -3,6 +3,8 @@ import Auth from "./page/Auth";
 import Product from "./page/Product";
 import ForgotPassword from "./component/ForgotPassword";
 import Cart from "./page/Cart";
+import ClothingPage from "./page/Clothing";
+import AccessoriesPage from "./page/Accessories";
 
 function App() {
   return (
@@ -13,6 +15,8 @@ function App() {
         <Route path="/forgot-password" element={<ForgotPassword/>}/>
         <Route path="/product" element={<Product/>}/>
         <Route path="/cart" element={<Cart/>}/>
+        <Route path="/clothing" element={<ClothingPage/>}/>
+        <Route path="/accessories" element={<AccessoriesPage/>}/>
       </Routes>
     </Router>
     </div>
