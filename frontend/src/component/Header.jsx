@@ -7,27 +7,44 @@ import {
   RiUserLine,
 } from "react-icons/ri";
 
-import { GiClothes } from "react-icons/gi";
+import { FaHome } from "react-icons/fa";
 
-const Header = ({ cartItemCount }) => {
+import { GiClothes } from "react-icons/gi";
+import { getCartItemCount } from "../redux/reducer";
+import { useSelector } from "react-redux";
+
+const Header = () => {
+  const cartItemCount = useSelector(getCartItemCount);
+
   return (
     <div className="fixed top-0 left-0 right-0 z-10 p-4 bg-gray-800 text-white">
       <div className="flex items-center justify-between">
+        {/* Left Section - Top Left Corner */}
         <div className="flex items-center space-x-8">
-          <Link to="/">
+          <Link to="/product">
             <span className="text-lg font-bold">SHOPLANE</span>
           </Link>
-          <Link to="/clothing" className="flex items-center space-x-2">
-            <GiClothes size={20} />
-            <span>Clothing</span>
+        </div>
+
+        {/* Center Section - Centered */}
+        <div className="flex items-center space-x-8">
+          <Link to="/product" className="flex items-center">
+            <FaHome size={20}/>
+            <span className="ml-1">Home</span>
           </Link>
-          <Link to="/accessories" className="flex items-center space-x-2">
+          <Link to="/product" className="flex items-center">
+            <GiClothes size={20} />
+            <span className="ml-1">Clothing</span>
+          </Link>
+          <Link to="/product" className="flex items-center">
             <RiAncientPavilionFill size={20} />
-            <span>Accessories</span>
+            <span className="ml-1">Accessories</span>
           </Link>
         </div>
+
+        {/* Right Section - Top Right Corner */}
         <div className="flex items-center space-x-8">
-          <Link to="/search">
+          <Link to="/product">
             <RiSearchLine size={20} />
           </Link>
           <Link to="/cart" className="relative">
@@ -36,7 +53,7 @@ const Header = ({ cartItemCount }) => {
               {cartItemCount}
             </span>
           </Link>
-          <Link to="/profile">
+          <Link to="/product">
             <RiUserLine size={20} />
           </Link>
         </div>
