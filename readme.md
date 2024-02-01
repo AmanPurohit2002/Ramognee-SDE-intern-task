@@ -3,19 +3,8 @@
 This is a simple React web application with a signup/login page and a product view page.
 
 
-## Installation
 
 
-# Create React App
-```bash
- 
-npx create-react-app my-react-webapp
-```
-
-# Navigate to the project directory
-```bash 
-cd my-react-webapp
-```
 
 # How to Run
 ```bash
